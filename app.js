@@ -7,6 +7,7 @@ require('./hbs/helper');
 const port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/views'))
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); 
 app.use('/jq', express.static(__dirname + '/node_modules/jquery/dist'));
